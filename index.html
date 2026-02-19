@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khalil Jaouani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+  <canvas id="matrix-canvas"></canvas>
+  <div class="loader" id="loader">
+    <img class="loader-logo" src="securinets.png" alt="Securinets"/>
+    <div class="loader-text">booting securinets shell...</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#skills" onclick="closeMobile()">Skills</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#writeups" onclick="closeMobile()">Writeups</a>
+    <a href="#ctf" onclick="closeMobile()">CTF</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+  <nav>
+    <div class="nav-logo">KJ//</div>
+    <ul class="nav-links">
+      <li><a href="#about"><span class="nav-number">01.</span>About</a></li>
+      <li><a href="#skills"><span class="nav-number">02.</span>Skills</a></li>
+      <li><a href="#projects"><span class="nav-number">03.</span>Projects</a></li>
+      <li><a href="#writeups"><span class="nav-number">04.</span>Writeups</a></li>
+      <li><a href="#ctf"><span class="nav-number">05.</span>CTF</a></li>
+      <li><a href="#contact"><span class="nav-number">06.</span>Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-bg-text">RE</div>
+    <img class="hero-securinets-bg" src="securinets.png" alt=""/>
+    <div class="hero-tag">
+      <span>Securinets ISSAT Mateur</span>
+      <span class="hero-tag-sep">///</span>
+      <span>Available for opportunities</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="line"><span>Khalil</span></span>
+      <span class="line"><span>Jaouani<span class="accent-word">.</span></span></span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-desc">
+        Reverse Engineering Enthusiast.<br/>
+        Breaking binaries, dissecting protocols,<br/>
+        and digging deep into how systems really work.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn">View Work <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-filled">Let's Talk</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+  <section id="about" class="dark-section">
+    <div class="section-header reveal">
+      <span class="section-num">01 —</span>
+      <h2 class="section-title">About</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <p class="about-intro">
+          I'm <strong>Khalil</strong> — a curious mind with a deep interest in
+          <span class="hl">reverse engineering</span>, low-level systems, and
+          understanding software from the inside out. I spend most of my time
+          analyzing binaries, dissecting protocols, and digging into how things
+          work beneath the surface.
+        </p>
+        <div class="about-tags">
+          <span class="tag">Malware Analysis</span>
+          <span class="tag">Binary Exploitation</span>
+          <span class="tag">CTF Challenges</span>
+          <span class="tag">Systems Security</span>
+          <span class="tag">Reverse Engineering</span>
+          <span class="tag">Protocol Analysis</span>
+          <span class="tag">Low-Level Systems</span>
+        </div>
+        <div class="securinets-badge">
+          <img src="securinets.png" alt="Securinets ISSAT Mateur"/>
+          <div class="securinets-badge-text">
+            <strong>Securinets ISSAT Mateur</strong>
+            <span>Cybersecurity Club Member</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <div class="about-stats">
+          <div class="stat-box"><span class="stat-num" data-target="3">0</span><span class="stat-label">Years Learning</span></div>
+          <div class="stat-box"><span class="stat-num" data-target="10">0</span><span class="stat-label">CTFs Played</span></div>
+          <div class="stat-box"><span class="stat-num" data-target="5">0</span><span class="stat-label">Tools Mastered</span></div>
+          <div class="stat-box"><span class="stat-num" data-target="100">0</span><span class="stat-label">% Committed</span></div>
+        </div>
+        <div class="about-info">
+          <div class="info-row"><span class="info-label">Location</span><span class="info-val">Mateur, Tunisia 🇹🇳</span></div>
+          <div class="info-row"><span class="info-label">Education</span><span class="info-val">ISSAT Mateur</span></div>
+          <div class="info-row"><span class="info-label">Club</span><span class="info-val accent2-word">Securinets ISSAT Mateur</span></div>
+          <div class="info-row"><span class="info-label">Email</span><span class="info-val">khalil.jaouani@issatm.ucar.tn</span></div>
+          <div class="info-row"><span class="info-label">Status</span><span class="info-val accent-word">● Open to Opportunities</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="section-header reveal">
+      <span class="section-num">02 —</span>
+      <h2 class="section-title">Skills</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-wrapper reveal">
+      <div class="skill-block">
+        <div class="skill-block-num">01</div>
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">C / C++</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">x86/x64 Assembly</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-num">02</div>
+        <h3>RE &amp; Security Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">IDA Pro</span>
+          <span class="skill-tag">Ghidra</span>
+          <span class="skill-tag">GDB / pwndbg</span>
+          <span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">Radare2</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-num">03</div>
+        <h3>General</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects" class="dark-section">
+    <div class="section-header reveal">
+      <span class="section-num">03 —</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-list" id="projectsList">
+      <div class="projects-loading"><i class="fas fa-spinner fa-spin"></i>&nbsp; Loading from GitHub...</div>
+    </div>
+  </section>
+  <section id="writeups">
+    <div class="section-header reveal">
+      <span class="section-num">04 —</span>
+      <h2 class="section-title">Writeups</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="writeup-filters reveal">
+      <button class="wf-btn active" data-filter="all">All</button>
+      <button class="wf-btn" data-filter="rev">Reverse Engineering</button>
+      <button class="wf-btn" data-filter="pwn">Pwn</button>
+      <button class="wf-btn" data-filter="forensics">Forensics</button>
+      <button class="wf-btn" data-filter="crypto">Crypto</button>
+      <button class="wf-btn" data-filter="web">Web</button>
+    </div>
+    <div class="writeups-grid" id="writeupsGrid">
+      <div class="writeups-empty reveal">
+        <div class="writeups-empty-icon"><i class="fas fa-flag"></i></div>
+        <p class="writeups-empty-title">No writeups yet</p>
+        <p class="writeups-empty-sub">Writeups will appear here after CTF competitions.</p>
+      </div>
+    </div>
+    <div class="writeups-more reveal">
+      <p class="writeups-more-text">Coming soon...</p>
+      <a href="https://github.com/khalilja" target="_blank" class="btn">View GitHub <i class="fab fa-github"></i></a>
+    </div>
+  </section>
+  <section id="ctf" class="dark-section">
+    <div class="section-header reveal">
+      <span class="section-num">05 —</span>
+      <h2 class="section-title">CTF</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="ctf-grid reveal">
+      <div class="ctf-card">
+        <div class="ctf-card-num">01</div>
+        <i class="fas fa-microchip ctf-card-icon-fa"></i>
+        <h3>Reverse Engineering</h3>
+        <p>Specialized in RE challenges — dissecting binaries, crackmes, and malware samples using IDA Pro, Ghidra &amp; Radare2.</p>
+      </div>
+      <div class="ctf-card">
+        <div class="ctf-card-num">02</div>
+        <i class="fas fa-terminal ctf-card-icon-fa"></i>
+        <h3>Binary Exploitation</h3>
+        <p>Buffer overflows, ROP chains, heap exploitation — going deep into pwn challenges with GDB and pwndbg.</p>
+      </div>
+      <div class="ctf-card">
+        <div class="ctf-card-num">03</div>
+        <i class="fas fa-magnifying-glass ctf-card-icon-fa"></i>
+        <h3>Forensics &amp; Analysis</h3>
+        <p>Memory dumps, packet captures, disk forensics — piecing together the puzzle from artifacts and network traffic.</p>
+      </div>
+    </div>
+    <div class="github-stats-wrap reveal">
+      <div class="stats-label">// GitHub Stats</div>
+      <div class="gh-stats-grid" id="ghStatsGrid">
+        <div class="gh-stat-card" id="ghCard1"><div class="gh-card-loader"><i class="fas fa-spinner fa-spin"></i></div></div>
+        <div class="gh-stat-card" id="ghCard2"><div class="gh-card-loader"><i class="fas fa-spinner fa-spin"></i></div></div>
+        <div class="gh-stat-card" id="ghCard3"><div class="gh-card-loader"><i class="fas fa-spinner fa-spin"></i></div></div>
+        <div class="gh-stat-card" id="ghCard4"><div class="gh-card-loader"><i class="fas fa-spinner fa-spin"></i></div></div>
+      </div>
+      <div class="streak-wrap">
+        <img id="streakImg" src="https://streak-stats.demolab.com?user=khalilja&theme=highcontrast&hide_border=true&background=020c07&stroke=00ff88&ring=00e5ff&fire=00ff88&currStreakLabel=00ff88&sideLabels=3a6b4a&dates=3a6b4a" alt="GitHub Streak" onerror="this.parentElement.style.display='none'"/>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="section-header reveal">
+      <span class="section-num">06 —</span>
+      <h2 class="section-title">Contact</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <h3 class="contact-big">Let's build something <span class="accent-word">together.</span></h3>
+        <p class="contact-desc">Open to collaborations, CTF teams, security research, and interesting projects. Don't hesitate to reach out.</p>
+        <div class="contact-links">
+          <a href="mailto:khalil.jaouani@issatm.ucar.tn" class="contact-link"><span class="contact-link-left"><i class="fas fa-envelope"></i> khalil.jaouani@issatm.ucar.tn</span><i class="fas fa-arrow-right"></i></a>
+          <a href="https://github.com/khalilja" target="_blank" class="contact-link"><span class="contact-link-left"><i class="fab fa-github"></i> github.com/khalilja</span><i class="fas fa-arrow-right"></i></a>
+          <a href="https://www.linkedin.com/in/khalil--jaouani/" target="_blank" class="contact-link"><span class="contact-link-left"><i class="fab fa-linkedin"></i> khalil--jaouani</span><i class="fas fa-arrow-right"></i></a>
+          <a href="https://x.com/KHALILJAOU44081" target="_blank" class="contact-link"><span class="contact-link-left"><i class="fab fa-x-twitter"></i> @KHALILJAOU44081</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="reveal">
+        <form class="contact-form" id="contactForm">
+          <div class="form-field"><input type="text" placeholder="Your Name" required/></div>
+          <div class="form-field"><input type="email" placeholder="Your Email" required/></div>
+          <div class="form-field"><input type="text" placeholder="Subject"/></div>
+          <div class="form-field"><textarea rows="6" placeholder="Your Message" required></textarea></div>
+          <button type="submit" class="btn btn-filled form-submit">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-left">© 2026 — KHALIL JAOUANI</div>
+    <div class="footer-right">
+      <img src="securinets.png" alt="Securinets"/>
+      <span>SECURINETS ISSAT MATEUR</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
